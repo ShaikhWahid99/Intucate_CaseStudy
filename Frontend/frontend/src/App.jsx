@@ -21,7 +21,7 @@ function App() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/chat",
+       `${import.meta.env.VITE_API_URL}/chat`,
         {
           method: "POST",
 
@@ -63,7 +63,7 @@ function App() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/bulk-chat",
+        `${import.meta.env.VITE_API_URL}/bulk-chat`,
         {
           method: "POST",
 

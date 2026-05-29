@@ -6,11 +6,11 @@ from app.db.database import db
 
 app = FastAPI()
 
+# DB test endpoint
 @app.get("/")
 async def home():
 
-    return {
-        "message": "Database connected"
-    }
+    return {"message": "Database connected"}
+
 
 app.include_router(router)
